@@ -59,22 +59,20 @@ export default function Header() {
             {/* LOGIN → rien */}
           </div>
 
-          {/* HAMBURGER MOBILE */}
-          {isLogin && (
-            <button
-              className="hamburger mobile-only"
-              onClick={() => setMenuOpen(!menuOpen)}
-            >
-              <span></span>
-              <span></span>
-              <span></span>
-            </button>
-          )}
+          {/* HAMBURGER MOBILE — visible sur TOUTES les pages */}
+          <button
+            className="hamburger mobile-only"
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
 
         </div>
 
-        {/* MENU MOBILE */}
-        {menuOpen && isLogin && (
+        {/* MENU MOBILE — visible sur TOUTES les pages */}
+        {menuOpen && (
           <div className="mobile-menu">
 
             <Link
@@ -93,8 +91,16 @@ export default function Header() {
               Contact
             </Link>
 
+            <Link
+              className="mobile-link"
+              to="/login"
+              onClick={() => setMenuOpen(false)}
+            >
+              Log In
+            </Link>
+
             <button className="btn-primary mobile-btn">
-              Se connecter
+              Join Now
             </button>
           </div>
         )}
