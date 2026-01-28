@@ -1,0 +1,12 @@
+.login-page {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #0F172A; /* même bleu que LogIn */
+}
+
+.login-page > footer {
+  margin-top: auto;
+  width: 100%;
+}

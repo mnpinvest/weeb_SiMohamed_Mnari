@@ -6,19 +6,6 @@ export default function LogIn() {
     <main className="login-wrapper">
 
       {/* ============================
-          HEADER FIGMA
-      ============================ */}
-      <header className="login-header">
-        <div className="login-logo">weeb</div>
-        <button className="login-menu-button">
-          <span className="menu-icon"></span>
-          <span className="menu-icon"></span>
-          <span className="menu-icon"></span>
-        </button>
-      </header>
-
-
-      {/* ============================
           SECTION FIGMA LOGIN
       ============================ */}
       <section className="login-figma-box">
