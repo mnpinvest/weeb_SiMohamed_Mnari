@@ -189,12 +189,10 @@
 
 @media (max-width: 600px) {
 
-  /* On cache les éléments desktop */
   .desktop-only {
     display: none;
   }
 
-  /* On affiche les éléments mobile */
   .mobile-only {
     display: flex;
   }
@@ -206,5 +204,42 @@
 
   .logo {
     font-size: 28px;
+  }
+}
+
+/* ============================
+   RESPONSIVE TABLETTE (601px → 900px)
+   ============================ */
+
+@media (min-width: 601px) and (max-width: 900px) {
+
+  .header-box {
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 16px;
+  }
+
+  .nav-left {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .btn-group {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .btn-primary {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .nav-link {
+    font-size: 15px;
   }
 }
