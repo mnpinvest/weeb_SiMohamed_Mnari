@@ -26,7 +26,7 @@ export default function Header() {
               {/* HOME */}
               {isHome && (
                 <>
-                  <Link className="nav-link" to="/about">About Us</Link>
+                  <Link className="nav-link" to="/">About Us</Link>
                   <Link className="nav-link" to="/contact">Contact</Link>
                 </>
               )}

@@ -4,38 +4,63 @@ export default function Contact() {
   return (
     <div className="contact-page">
 
-      {/* SECTION HEADER DE LA PAGE */}
+      {/* SECTION TITRE + PARAGRAPHE */}
       <div className="contact-header">
-        <h1 className="contact-title">Contact</h1>
+        <h1 className="contact-title">Votre avis compte !</h1>
+
         <p className="contact-subtitle">
-          Nous sommes là pour répondre à vos questions.  
-          Remplissez le formulaire ci-dessous et nous vous répondrons rapidement.
+          Votre retour est essentiel pour nous améliorer ! Partagez votre expérience,
+          dites‑nous ce que vous aimez et ce que nous pourrions améliorer. Vos suggestions
+          nous aident à faire de ce blog une ressource toujours plus utile et enrichissante.
         </p>
       </div>
 
       {/* SECTION FORMULAIRE */}
-      <div className="contact-container">
+      <div className="contact-form-box">
 
         <form className="contact-form">
 
-          <div className="form-group">
-            <label>Nom</label>
-            <input type="text" placeholder="Votre nom" />
+          {/* LIGNE 1 : NOM + PRÉNOM */}
+          <div className="form-row">
+            <div className="form-group underline">
+              <label>Nom</label>
+              <input type="text" />
+            </div>
+
+            <div className="form-group underline">
+              <label>Prénom</label>
+              <input type="text" />
+            </div>
           </div>
 
-          <div className="form-group">
-            <label>Email</label>
-            <input type="email" placeholder="Votre email" />
+          {/* LIGNE 2 : ADRESSE (ENCADRÉ) + EMAIL */}
+          <div className="form-row">
+            <div className="form-group boxed">
+              <label>Adresse</label>
+              <input type="text" />
+            </div>
+
+            <div className="form-group underline">
+              <label>Email</label>
+              <input type="email" />
+            </div>
           </div>
 
-          <div className="form-group">
+          {/* MESSAGE */}
+          <div className="form-group underline full-width">
             <label>Message</label>
-            <textarea placeholder="Votre message"></textarea>
+            <textarea></textarea>
           </div>
 
-          <button type="submit" className="contact-btn">
-            Envoyer
-          </button>
+          {/* BOUTON + CASE RADIO ALIGNÉS */}
+          <div className="form-footer">
+            <button type="submit" className="contact-btn">Contact</button>
+
+            <div className="radio-wrapper">
+              <input type="checkbox" className="radio-input" />
+              <span className="radio-custom"></span>
+            </div>
+          </div>
 
         </form>
 
