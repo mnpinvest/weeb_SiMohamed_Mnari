@@ -25,10 +25,10 @@
   border-bottom: 1px solid #E2E8F0;
 
   display: flex;
-  justify-content: space-between; /* ✅ répartit les colonnes sans saut */
+  justify-content: space-between;
   align-items: flex-start;
-  gap: 32px; /* ✅ réduit pour éviter les débordements */
-  flex-wrap: wrap; /* ✅ permet le wrap sur mobile */
+  gap: 32px;
+  flex-wrap: wrap;
 }
 
 
@@ -37,8 +37,8 @@
    ============================ */
 
 .footer-col {
-  flex: 1 1 200px; /* ✅ largeur fluide, min 200px */
-  max-width: 240px; /* ✅ limite haute */
+  flex: 1 1 200px;
+  max-width: 240px;
   min-height: 200px;
 
   display: flex;
@@ -174,26 +174,43 @@
    ============================ */
 
 @media (max-width: 600px) {
+
   .footer {
     padding: 0 16px;
   }
 
   .footer-top {
     padding: 32px 0;
-    gap: 28px;
+    gap: 18px; /* 🔥 Réduction globale */
   }
 
+  /* 🔥 Remonter PRODUCT juste sous WEEB */
+  .footer-col:first-child {
+    margin-bottom: 4px; /* très serré comme la maquette */
+  }
+
+  /* 🔥 Toutes les colonnes serrées */
   .footer-col {
     width: 100%;
     max-width: 100%;
+    min-height: auto;
+    gap: 4px; /* réduit */
   }
 
   .footer-title {
     font-size: 16px;
+    padding-top: 2px; /* réduit */
+    margin-bottom: 0;
+  }
+
+  .footer-links {
+    padding-top: 6px; /* réduit */
+    gap: 6px;
   }
 
   .footer-links li {
     font-size: 15px;
+    padding: 4px 0; /* serré */
   }
 
   .footer-bottom {
