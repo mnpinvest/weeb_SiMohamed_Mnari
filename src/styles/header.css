@@ -1,0 +1,127 @@
+/* ============================
+   VARIABLES GLOBALES
+   ============================ */
+
+:root {
+  --color-white: #FFFFFF;
+  --color-purple-600: #9333EA;
+
+  --font-main: 'Roboto', sans-serif;
+
+  --fs-nav: 16px;
+  --fw-medium: 500;
+  --ls-nav: 0.5px;
+
+  --radius-btn: 8px;
+}
+
+
+/* ============================
+   STRUCTURE DU HEADER
+   ============================ */
+
+.header {
+  width: 100%;
+  padding: 24px 24px; /* AVANT : 80px → causait le débordement */
+  background-color: #0F172A;
+  display: flex;
+  justify-content: center;
+}
+
+
+/* Conteneur principal */
+.header-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  max-width: 1200px;
+  padding: 16px 24px; /* AVANT : 24px partout → trop large */
+
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow:
+    0px 25px 50px -12px rgba(0, 0, 0, 0.25),
+    0px 0px 15px rgba(0, 0, 0, 0.07);
+  border-radius: 20px;
+
+  flex-wrap: wrap; /* AVANT : nowrap → causait le débordement */
+  gap: 24px; /* AVANT : 32px → trop large */
+}
+
+
+/* ============================
+   BLOC GAUCHE : LOGO + LIENS
+   ============================ */
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 24px; /* AVANT : 32px */
+}
+
+.logo {
+  font-family: var(--font-main);
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 110%;
+  color: var(--color-white);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 24px; /* AVANT : 32px */
+}
+
+.nav-link {
+  font-family: var(--font-main);
+  font-size: var(--fs-nav);
+  font-weight: var(--fw-medium);
+  line-height: 24px;
+  letter-spacing: var(--ls-nav);
+  color: var(--color-white);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.nav-link:hover {
+  opacity: 0.8;
+}
+
+
+/* ============================
+   BLOC DROITE : LOG IN + JOIN
+   ============================ */
+
+.btn-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.btn-primary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 12px 20px;
+  height: 48px;
+
+  background: var(--color-purple-600);
+  border: 2px solid var(--color-purple-600);
+  border-radius: var(--radius-btn);
+
+  font-family: var(--font-main);
+  font-size: var(--fs-nav);
+  font-weight: var(--fw-medium);
+  letter-spacing: var(--ls-nav);
+  color: var(--color-white);
+
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}

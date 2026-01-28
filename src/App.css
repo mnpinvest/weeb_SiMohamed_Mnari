@@ -1,0 +1,26 @@
+/* RESET GLOBAL */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  font-family: 'Roboto', sans-serif;
+  background-color: #0F172A;
+  color: #FFFFFF;
+}
+
+/* ROOT NE DOIT PAS AVOIR DE MAX-WIDTH */
+#root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: left; /* ou center si tu veux, mais pas obligatoire */
+}
+
+/* SUPPRESSION DES STYLES VITE INUTILES */
+.logo,
+.card,
+.read-the-docs {
+  all: unset;
+}

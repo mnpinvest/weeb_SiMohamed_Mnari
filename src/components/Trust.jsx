@@ -1,0 +1,48 @@
+import "../styles/trust.css";
+
+import SmartFinder from "../assets/SmartFinder.png";
+import Zoomerr from "../assets/Zoomerr.png";
+import Schells from "../assets/Schells.png";
+import Waves from "../assets/Waves.png";
+import ArtVenue from "../assets/ArtVenue.png";
+
+export default function Trust() {
+  console.log("TRUST RENDU");
+
+  return (
+    <section className="trust">
+      <div className="trust-box">
+        <div className="trust-title-wrapper">
+          <h2 className="trust-title">Ils nous font confiance</h2>
+        </div>
+
+        <div className="trust-logos">
+          <div className="trust-logo">
+            <img src={SmartFinder} alt="SmartFinder" />
+            <span>SmartFinder</span>
+          </div>
+
+          <div className="trust-logo">
+            <img src={Zoomerr} alt="Zoomerr" />
+            <span>Zoomerr</span>
+          </div>
+
+          <div className="trust-logo">
+            <img src={Schells} alt="Schells" />
+            <span>Schells</span>
+          </div>
+
+          <div className="trust-logo">
+            <img src={Waves} alt="Waves" />
+            <span>Waves</span>
+          </div>
+
+          <div className="trust-logo">
+            <img src={ArtVenue} alt="ArtVenue" />
+            <span>ArtVenue</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

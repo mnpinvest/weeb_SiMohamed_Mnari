@@ -1,0 +1,61 @@
+/* ============================
+   RESET & STRUCTURE GLOBALE
+   ============================ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; /* supprime la bande blanche */
+  font-family: 'Roboto', sans-serif;
+  background-color: #0F172A; /* couleur de fond cohérente */
+  color: #FFFFFF;
+}
+
+
+/* ============================
+   CONTAINER CENTRAL
+   ============================ */
+
+.container {
+  width: 100%;
+  max-width: 1280px; /* largeur max comme dans Figma */
+  margin: 0 auto;    /* centre le contenu */
+  padding: 0 24px;   /* padding fluide horizontal */
+}
+
+
+/* ============================
+   TYPOGRAPHIE & LIENS
+   ============================ */
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* ============================
+   RESPONSIVE GLOBAL
+   ============================ */
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  body {
+    font-size: 16px;
+  }
+}

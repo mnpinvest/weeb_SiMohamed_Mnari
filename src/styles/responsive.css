@@ -1,0 +1,77 @@
+/* ============================================================
+   SYSTEME RESPONSIVE GLOBAL — MOBILE FIRST
+   ============================================================ */
+
+/* Container global : utilisé dans App.jsx / Home / Login / Contact */
+.container {
+  width: 100%;
+  max-width: 318px; /* largeur mobile Figma */
+  margin: 0 auto;
+  padding: 0 16px; /* évite que le contenu colle aux bords */
+  box-sizing: border-box;
+}
+
+/* ============================================================
+   TABLETTE (≥ 600px)
+   ============================================================ */
+
+@media (min-width: 600px) {
+  .container {
+    max-width: 420px; /* largeur confortable tablette */
+  }
+}
+
+/* ============================================================
+   ORDINATEUR PORTABLE (≥ 900px)
+   ============================================================ */
+
+@media (min-width: 900px) {
+  .container {
+    max-width: 500px; /* largeur laptop */
+  }
+}
+
+/* ============================================================
+   GRAND ÉCRAN BUREAU (≥ 1200px)
+   ============================================================ */
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 600px; /* largeur bureau */
+  }
+}
+
+/* ============================================================
+   TRES GRAND ÉCRAN (≥ 1600px)
+   ============================================================ */
+
+@media (min-width: 1600px) {
+  .container {
+    max-width: 700px; /* pour très grands écrans */
+  }
+}
+
+/* ============================================================
+   REGLES RESPONSIVE GLOBALES POUR TOUT LE SITE
+   ============================================================ */
+
+/* Images fluides partout */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Sections : espacement vertical cohérent */
+section {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+/* Titres : lisibilité et casse propre */
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  word-break: break-word;
+}

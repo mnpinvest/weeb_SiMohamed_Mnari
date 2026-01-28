@@ -1,0 +1,208 @@
+/* ============================
+   FOOTER GLOBAL
+   ============================ */
+
+.footer {
+  width: 100%;
+  background: #FFFFFF;
+  border-top: 1px solid #CBD5E1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+
+/* ============================
+   BLOC SUPÉRIEUR (COLONNES)
+   ============================ */
+
+.footer-top {
+  width: 100%;
+  max-width: 1280px;
+  padding: 48px 0;
+  border-bottom: 1px solid #E2E8F0;
+
+  display: flex;
+  justify-content: space-between; /* ✅ répartit les colonnes sans saut */
+  align-items: flex-start;
+  gap: 32px; /* ✅ réduit pour éviter les débordements */
+  flex-wrap: wrap; /* ✅ permet le wrap sur mobile */
+}
+
+
+/* ============================
+   COLONNES
+   ============================ */
+
+.footer-col {
+  flex: 1 1 200px; /* ✅ largeur fluide, min 200px */
+  max-width: 240px; /* ✅ limite haute */
+  min-height: 200px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+
+/* ============================
+   LOGO (weeb)
+   ============================ */
+
+.footer-logo {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 110%;
+  color: #0F172A !important;
+  padding-top: 6px;
+}
+
+
+/* ============================
+   TITRES DES COLONNES
+   ============================ */
+
+.footer-title {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #94A3B8;
+  margin: 0;
+  padding-top: 6px;
+}
+
+
+/* ============================
+   LIENS
+   ============================ */
+
+.footer-links {
+  list-style: none;
+  padding: 16px 0 0 0;
+  margin: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-links li {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: #0F172A;
+  padding: 6px 0;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.footer-links li:hover {
+  opacity: 0.7;
+}
+
+
+/* ============================
+   BLOC INFÉRIEUR
+   ============================ */
+
+.footer-bottom {
+  width: 100%;
+  max-width: 1280px;
+  padding: 32px 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-copy {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: #0F172A;
+}
+
+
+/* ============================
+   ICONES SOCIALES
+   ============================ */
+
+.footer-socials {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-icon {
+  font-size: 24px;
+  color: #0F172A;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.footer-icon:hover {
+  opacity: 0.7;
+}
+
+
+/* ============================
+   RESPONSIVE TABLETTE (≤ 900px)
+   ============================ */
+
+@media (max-width: 900px) {
+  .footer-top {
+    gap: 40px;
+    justify-content: flex-start;
+  }
+
+  .footer-col {
+    max-width: 300px;
+  }
+
+  .footer-bottom {
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+
+/* ============================
+   RESPONSIVE MOBILE (≤ 600px)
+   ============================ */
+
+@media (max-width: 600px) {
+  .footer {
+    padding: 0 16px;
+  }
+
+  .footer-top {
+    padding: 32px 0;
+    gap: 28px;
+  }
+
+  .footer-col {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .footer-title {
+    font-size: 16px;
+  }
+
+  .footer-links li {
+    font-size: 15px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 12px;
+    padding: 24px 0;
+  }
+
+  .footer-copy {
+    font-size: 14px;
+  }
+}

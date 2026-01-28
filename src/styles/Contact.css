@@ -1,0 +1,165 @@
+/* ============================
+   SECTION CONTACT (fond global)
+   ============================ */
+
+.contact {
+  width: 100%;
+  background-color: #0F172A;
+  display: flex;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+
+/* ============================
+   CONTAINER PRINCIPAL
+   ============================ */
+
+.contact-box {
+  width: 100%;
+  max-width: 800px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 40px 32px;
+  border-radius: 16px;
+
+  box-shadow:
+    0px 0px 15px rgba(0, 0, 0, 0.07),
+    0px 25px 50px -12px rgba(0, 0, 0, 0.25);
+
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+
+/* ============================
+   TITRE
+   ============================ */
+
+.contact-title {
+  font-family: "Roboto", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+
+/* ============================
+   PARAGRAPHE INTRO
+   ============================ */
+
+.contact-text {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  line-height: 160%;
+  color: #FFFFFF;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+
+/* ============================
+   FORMULAIRE
+   ============================ */
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form label {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: #FFFFFF;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #CBD5E1;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+}
+
+.contact-form textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+
+/* ============================
+   BOUTON
+   ============================ */
+
+.contact-btn {
+  width: 100%;
+  max-width: 260px;
+  height: 52px;
+  margin: 0 auto;
+
+  background-color: #9333EA;
+  border: 2px solid #9333EA;
+  border-radius: 8px;
+
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #FFFFFF;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.contact-btn:hover {
+  opacity: 0.9;
+}
+
+
+/* ============================
+   RESPONSIVE TABLETTE (≤ 900px)
+   ============================ */
+
+@media (max-width: 900px) {
+  .contact-title {
+    font-size: 30px;
+  }
+
+  .contact-text {
+    font-size: 16px;
+  }
+}
+
+
+/* ============================
+   RESPONSIVE MOBILE (≤ 600px)
+   ============================ */
+
+@media (max-width: 600px) {
+  .contact-box {
+    padding: 28px 20px;
+    gap: 24px;
+  }
+
+  .contact-title {
+    font-size: 26px;
+  }
+
+  .contact-text {
+    font-size: 15px;
+  }
+
+  .contact-btn {
+    max-width: 100%;
+    height: 48px;
+    font-size: 16px;
+  }
+}

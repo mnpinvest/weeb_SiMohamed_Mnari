@@ -1,0 +1,226 @@
+/* ============================
+   SECTION HERO (fond global)
+   ============================ */
+
+.hero {
+  width: 100%;
+  padding: 64px 0 0 0;
+  background-color: #0F172A;
+  display: flex;
+  justify-content: center;
+}
+
+
+/* ============================
+   RECTANGLE DE SECTION : HERO-BOX
+   ============================ */
+
+.hero-box {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  padding: 48px 48px 32px;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow:
+    0px 25px 50px -12px rgba(0, 0, 0, 0.25),
+    0px 0px 15px rgba(0, 0, 0, 0.07);
+  border-radius: 24px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+
+/* ============================
+   CONTENU TEXTE
+   ============================ */
+
+.hero-content {
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+
+/* TITRE PRINCIPAL */
+
+.hero-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 72px;
+  font-weight: 800;
+  line-height: 110%;
+  text-align: center;
+  color: #FFFFFF;
+  max-width: 1000px;
+}
+
+.hero-web {
+  color: #C084FC;
+  font-weight: 300;
+}
+
+.hero-facettes {
+  color: #C084FC;
+  font-weight: 300;
+  text-decoration: underline;
+}
+
+
+/* PARAGRAPHE */
+
+.hero-text {
+  max-width: 800px;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 160%;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+
+/* ============================
+   BOUTONS
+   ============================ */
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  padding: 16px;
+  width: 237px;
+  height: 56px;
+
+  background-color: #9333EA;
+  border: 2px solid #9333EA;
+  border-radius: 8px;
+
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  color: #FFFFFF;
+
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.btn-outline {
+  padding: 16px;
+  width: 266px;
+  height: 56px;
+
+  background-color: #0F172A;
+  border: 2px solid #FFFFFF;
+  border-radius: 8px;
+
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  color: #FFFFFF;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.btn-outline:hover {
+  opacity: 0.9;
+}
+
+
+/* ============================
+   IMAGE DANS LE MÊME RECTANGLE
+   ============================ */
+
+.hero-image-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 16px;
+  display: block;
+}
+
+
+/* ============================
+   RESPONSIVE TABLETTE (≤ 900px)
+   ============================ */
+
+@media (max-width: 900px) {
+  .hero-title {
+    font-size: 52px;
+  }
+
+  .hero-text {
+    font-size: 17px;
+  }
+
+  .btn-primary,
+  .btn-outline {
+    width: 100%;
+    max-width: 360px;
+  }
+}
+
+
+/* ============================
+   RESPONSIVE MOBILE (≤ 600px)
+   ============================ */
+
+@media (max-width: 600px) {
+  .hero-box {
+    padding: 32px 24px 20px;
+    gap: 24px;
+  }
+
+  .hero-title {
+    font-size: 36px;
+    line-height: 120%;
+  }
+
+  .hero-text {
+    font-size: 15px;
+    max-width: 100%;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .btn-primary,
+  .btn-outline {
+    width: 100%;
+    max-width: 300px;
+    height: 50px;
+    font-size: 17px;
+  }
+
+  .hero-image {
+    max-width: 100%;
+  }
+}

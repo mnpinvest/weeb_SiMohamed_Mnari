@@ -1,0 +1,201 @@
+/* ============================
+   SECTION TENDANCES (fond global)
+   ============================ */
+
+.tendances {
+  width: 100%;
+  background-color: #0F172A;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+
+/* ============================
+   RECTANGLE PRINCIPAL
+   ============================ */
+
+.tendances-box {
+  width: 100%;
+  max-width: 1440px;
+  padding: 40px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 80px;
+}
+
+
+/* ============================
+   BLOC GAUCHE (image)
+   ============================ */
+
+.tendances-left {
+  width: 100%;
+  max-width: 416px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tendances-image-wrapper {
+  width: 100%;
+  max-width: 416px;
+  height: auto;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tendances-image {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+
+/* ============================
+   BLOC DROIT (texte)
+   ============================ */
+
+.tendances-right {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+/* Caption */
+.tendances-caption {
+  font-family: "Roboto", sans-serif;
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+
+/* Titre */
+.tendances-title {
+  font-family: "Roboto", sans-serif;
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 120%;
+  color: #FFFFFF;
+}
+
+
+/* Texte */
+.tendances-text {
+  font-family: "Roboto", sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 160%;
+  color: #FFFFFF;
+}
+
+
+/* ============================
+   BOUTON
+   ============================ */
+
+.tendances-btn {
+  width: auto;
+  min-width: 220px;
+  height: 48px;
+  padding: 0 18px;
+
+  background-color: transparent;
+  border: none;
+  color: #FFFFFF;
+
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  white-space: nowrap;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.tendances-btn:hover {
+  opacity: 0.8;
+}
+
+.tendances-btn-icon {
+  font-size: 20px;
+}
+
+
+/* ============================
+   RESPONSIVE TABLETTE (≤ 900px)
+   ============================ */
+
+@media (max-width: 900px) {
+  .tendances-box {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .tendances-title {
+    font-size: 32px;
+  }
+
+  .tendances-text {
+    font-size: 16px;
+  }
+
+  .tendances-caption {
+    font-size: 17px;
+  }
+
+  .tendances-image-wrapper {
+    max-width: 360px;
+  }
+}
+
+
+/* ============================
+   RESPONSIVE MOBILE (≤ 600px)
+   ============================ */
+
+@media (max-width: 600px) {
+  .tendances-box {
+    padding: 24px 0;
+    gap: 28px;
+  }
+
+  .tendances-title {
+    font-size: 26px;
+    line-height: 120%;
+  }
+
+  .tendances-caption {
+    font-size: 15px;
+    letter-spacing: 1px;
+  }
+
+  .tendances-text {
+    font-size: 15px;
+  }
+
+  .tendances-btn {
+    min-width: 200px;
+    height: 46px;
+    font-size: 16px;
+  }
+
+  .tendances-image-wrapper {
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,209 @@
+/* ============================
+   WRAPPER GLOBAL
+   ============================ */
+
+.login-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #0F172A;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0 80px 0;
+}
+
+
+/* ============================
+   HEADER
+   ============================ */
+
+.login-header {
+  width: 100%;
+  max-width: 318px;
+  height: 74px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow:
+    0px 0px 15px rgba(0, 0, 0, 0.07),
+    0px 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.login-logo {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  color: #FFFFFF;
+}
+
+.login-menu-button {
+  width: 48px;
+  height: 44px;
+  background-color: #9333EA;
+  border: 2px solid #9333EA;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  padding: 6px;
+  cursor: pointer;
+}
+
+.menu-icon {
+  width: 100%;
+  height: 4px;
+  background-color: white;
+  border-radius: 2px;
+}
+
+
+/* ============================
+   SECTION FIGMA LOGIN
+   ============================ */
+
+.login-figma-box {
+  width: 100%;
+  max-width: 320px;
+  padding: 50px 80px;
+  display: flex;
+  justify-content: center;
+}
+
+.login-inner-box {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+
+/* TITRE */
+.login-figma-title {
+  font-family: "Roboto", sans-serif;
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 110%;
+  text-align: center;
+  color: #FFFFFF;
+  white-space: nowrap;
+}
+
+
+/* FORMULAIRE */
+.login-figma-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 26px; /* marge légère entre Email → Password → Bouton */
+}
+
+
+/* CHAMPS */
+.login-field {
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Label violet */
+.login-label {
+  font-family: "Inter", sans-serif;
+  font-size: 23px;
+  font-weight: 500;
+  text-align: center;
+  color: #C084FC;
+  background: none;
+  border: none;
+}
+
+/* Input invisible mais fonctionnel */
+.login-input {
+  width: 220px;
+  height: 24px;
+  margin-top: -2px;
+
+  background: none;
+  border: none;
+  outline: none;
+
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+/* Soulignement violet */
+.login-underline {
+  width: 220px;
+  height: 1px;
+  background-color: #C084FC;
+  border: 1px solid #C084FC;
+}
+
+
+/* BOUTON */
+.login-figma-button {
+  width: 156px;
+  height: 48px;
+  padding: 12px;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #FFFFFF;
+  background-color: #9333EA;
+  border: 2px solid #9333EA;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.login-figma-button:hover {
+  opacity: 0.9;
+}
+
+
+/* LIEN MOT DE PASSE OUBLIÉ */
+.login-forgot {
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 16px;
+  text-align: center;
+  color: #FFFFFF;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.login-forgot:hover {
+  text-decoration: underline;
+}
+
+
+/* TEXTE CRÉER UN COMPTE (3 lignes) */
+.login-create {
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+  color: #C4C4C4;
+  line-height: 140%;
+  margin-top: 8px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* "en créer un" → blanc + gras + souligné */
+.login-create a {
+  font-weight: 700;
+  color: #FFFFFF;
+  text-decoration: underline;
+}

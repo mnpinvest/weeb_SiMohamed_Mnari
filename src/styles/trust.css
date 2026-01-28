@@ -1,0 +1,145 @@
+/* ============================
+   SECTION TRUST (fond global)
+   ============================ */
+
+.trust {
+  width: 100%;
+  background-color: #0F172A;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+
+/* ============================
+   RECTANGLE PRINCIPAL
+   ============================ */
+
+.trust-box {
+  width: 100%;
+  max-width: 1440px;
+  padding: 32px 16px 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+
+/* ============================
+   TITRE
+   ============================ */
+
+.trust-title-wrapper {
+  width: 100%;
+  max-width: 1280px;
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.trust-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+
+/* ============================
+   LIGNE DES LOGOS
+   ============================ */
+
+.trust-logos {
+  width: 100%;
+  max-width: 1280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap; /* ⭐ permet le responsive automatique */
+}
+
+
+/* ============================
+   BLOC LOGO + TEXTE
+   ============================ */
+
+.trust-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 32px;
+}
+
+.trust-logo img {
+  height: 32px;
+  width: auto;
+}
+
+.trust-logo span {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #FFFFFF;
+}
+
+
+/* ============================
+   RESPONSIVE TABLETTE (≤ 900px)
+   ============================ */
+
+@media (max-width: 900px) {
+  .trust-logos {
+    gap: 28px;
+  }
+
+  .trust-title {
+    font-size: 28px;
+  }
+
+  .trust-title-wrapper {
+    margin-top: 20px;
+  }
+
+  .trust-logo span {
+    font-size: 16px;
+  }
+}
+
+
+/* ============================
+   RESPONSIVE MOBILE (≤ 600px)
+   ============================ */
+
+@media (max-width: 600px) {
+  .trust-box {
+    padding: 24px 12px 32px;
+    gap: 24px;
+  }
+
+  .trust-title {
+    font-size: 22px;
+  }
+
+  .trust-title-wrapper {
+    margin-top: 16px;
+  }
+
+  .trust-logos {
+    gap: 16px;
+  }
+
+  .trust-logo {
+    gap: 6px;
+  }
+
+  .trust-logo img {
+    height: 28px;
+  }
+
+  .trust-logo span {
+    font-size: 14px;
+  }
+}
