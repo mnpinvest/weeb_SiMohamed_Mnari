@@ -1,48 +1,82 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
 import "../styles/header.css";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation();
+  const path = location.pathname;
+
+  const isHome = path === "/";
+  const isContact = path === "/contact";
+  const isLogin = path === "/login";
 
   return (
     <header className="header">
       <div className="container">
         <div className="header-box">
 
-          {/* Bloc gauche : logo */}
+          {/* GAUCHE */}
           <div className="nav-left">
-            {/* Logo cliquable vers la page d'accueil */}
             <Link to="/" className="logo">weeb</Link>
 
             {/* Liens desktop */}
             <div className="nav-links desktop-only">
-              <Link className="nav-link" to="/about">About Us</Link>
-              <Link className="nav-link" to="/contact">Contact</Link>
+
+              {/* HOME */}
+              {isHome && (
+                <>
+                  <Link className="nav-link" to="/about">About Us</Link>
+                  <Link className="nav-link" to="/contact">Contact</Link>
+                </>
+              )}
+
+              {/* CONTACT */}
+              {isContact && (
+                <Link className="nav-link" to="/contact">Contact</Link>
+              )}
+
+              {/* LOGIN → aucun lien */}
             </div>
           </div>
 
-          {/* Bloc droite desktop */}
+          {/* DROITE DESKTOP */}
           <div className="btn-group desktop-only">
-            <Link className="nav-link" to="/login">Log In</Link>
-            <button className="btn-primary">Join Now</button>
+
+            {/* HOME */}
+            {isHome && (
+              <>
+                <Link className="nav-link" to="/login">Log In</Link>
+                <button className="btn-primary">Join Now</button>
+              </>
+            )}
+
+            {/* CONTACT */}
+            {isContact && (
+              <button className="btn-primary">Se connecter</button>
+            )}
+
+            {/* LOGIN → rien */}
           </div>
 
-          {/* Bouton hamburger mobile */}
-          <button
-            className="hamburger mobile-only"
-            onClick={() => setMenuOpen(!menuOpen)}
-          >
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
+          {/* HAMBURGER MOBILE */}
+          {isLogin && (
+            <button
+              className="hamburger mobile-only"
+              onClick={() => setMenuOpen(!menuOpen)}
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          )}
 
         </div>
 
-        {/* Menu mobile déroulant */}
-        {menuOpen && (
+        {/* MENU MOBILE */}
+        {menuOpen && isLogin && (
           <div className="mobile-menu">
+
             <Link
               className="mobile-link"
               to="/"
@@ -53,29 +87,15 @@ export default function Header() {
 
             <Link
               className="mobile-link"
-              to="/about"
-              onClick={() => setMenuOpen(false)}
-            >
-              About Us
-            </Link>
-
-            <Link
-              className="mobile-link"
               to="/contact"
               onClick={() => setMenuOpen(false)}
             >
               Contact
             </Link>
 
-            <Link
-              className="mobile-link"
-              to="/login"
-              onClick={() => setMenuOpen(false)}
-            >
-              Log In
-            </Link>
-
-            <button className="btn-primary mobile-btn">Join Now</button>
+            <button className="btn-primary mobile-btn">
+              Se connecter
+            </button>
           </div>
         )}
 
