@@ -12,9 +12,9 @@ html, body {
   margin: 0;
   padding: 0;
   width: 100%;
-  overflow-x: hidden; /* supprime la bande blanche */
+  overflow-x: hidden;
   font-family: 'Roboto', sans-serif;
-  background-color: #0F172A; /* couleur de fond cohérente */
+  background-color: #0F172A;
   color: #FFFFFF;
 }
 
@@ -25,9 +25,9 @@ html, body {
 
 .container {
   width: 100%;
-  max-width: 1280px; /* largeur max comme dans Figma */
-  margin: 0 auto;    /* centre le contenu */
-  padding: 0 24px;   /* padding fluide horizontal */
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
 }
 
 
@@ -58,4 +58,62 @@ h1, h2, h3, h4, h5, h6, p {
   body {
     font-size: 16px;
   }
+}
+
+
+/* ============================
+   BOUTONS GLOBAUX (RENFORCÉ)
+   ============================ */
+
+.btn-primary {
+  background-color: #9333EA !important;
+  color: #FFFFFF !important;
+  font-weight: 600 !important;
+  padding: 12px 24px !important;
+  border-radius: 8px !important;
+  border: none !important;
+  cursor: pointer !important;
+  transition: background-color 0.2s ease !important;
+  font-family: 'Roboto', sans-serif !important;
+  font-size: 20px !important;
+  letter-spacing: 0.5px !important;
+  display: inline-flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
+}
+
+.btn-primary:hover {
+  background-color: #7A22C8 !important;
+}
+
+.btn-primary:focus {
+  outline: 3px solid #FFD700 !important;
+  outline-offset: 3px !important;
+}
+
+
+/* ============================
+   ANIMATION 3D UNIVERSELLE
+   ============================ */
+
+@keyframes depthLoop {
+  0%   { transform: scale(1) rotateX(0deg); }
+  50%  { transform: scale(0.94) rotateX(14deg); }
+  100% { transform: scale(1) rotateX(0deg); }
+}
+
+/* ⭐ Classe réutilisable pour toutes les images du site */
+.img-3d {
+  animation: depthLoop 5s ease-in-out infinite;
+  transform-style: preserve-3d;
+
+  /* ⭐ Optimisé pour le parallax */
+  transition: transform 0.4s ease;
+  will-change: transform;
+}
+
+/* ⭐ Effet hover subtil (combo parfait avec le parallax) */
+.img-3d:hover {
+  transform: translateY(-6px) scale(1.02);
 }

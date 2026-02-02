@@ -18,27 +18,27 @@ export default function Trust() {
 
         <div className="trust-logos">
           <div className="trust-logo">
-            <img src={SmartFinder} alt="SmartFinder" />
+            <img src={SmartFinder} alt="SmartFinder" className="img-3d" />
             <span>SmartFinder</span>
           </div>
 
           <div className="trust-logo">
-            <img src={Zoomerr} alt="Zoomerr" />
+            <img src={Zoomerr} alt="Zoomerr" className="img-3d" />
             <span>Zoomerr</span>
           </div>
 
           <div className="trust-logo">
-            <img src={Schells} alt="Schells" />
+            <img src={Schells} alt="Schells" className="img-3d" />
             <span>Schells</span>
           </div>
 
           <div className="trust-logo">
-            <img src={Waves} alt="Waves" />
+            <img src={Waves} alt="Waves" className="img-3d" />
             <span>Waves</span>
           </div>
 
           <div className="trust-logo">
-            <img src={ArtVenue} alt="ArtVenue" />
+            <img src={ArtVenue} alt="ArtVenue" className="img-3d" />
             <span>ArtVenue</span>
           </div>
         </div>

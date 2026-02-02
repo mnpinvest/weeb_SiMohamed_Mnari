@@ -1,5 +1,6 @@
 import "../styles/hero.css";
 import heroIllustration from "../assets/Heroillustration.png";
+import { Link } from "react-router-dom";
 
 export default function Hero() {
   return (
@@ -7,6 +8,9 @@ export default function Hero() {
       <div className="container">
         <div className="hero-box">
           
+          {/* ============================
+              CONTENU TEXTE
+          ============================ */}
           <div className="hero-content">
             <h1 className="hero-title">
               Explorez le <span className="hero-web">Web</span> sous toutes<br />
@@ -14,24 +18,47 @@ export default function Hero() {
             </h1>
 
             <p className="hero-text">
-              Le monde du web évolue constamment, et nous sommes là pour vous guider à travers ses tendances,
-              technologies et meilleures pratiques. Que vous soyez développeur, designer ou passionné du digital,
-              notre blog vous offre du contenu de qualité pour rester à la pointe.
+              Le numérique évolue vite, et nous vous aidons à comprendre les solutions
+              qui transforment les organisations : outils modernes, automatisation,
+              optimisation des services et nouvelles pratiques digitales. Que vous
+              souhaitiez gagner en efficacité ou moderniser vos processus, explorez
+              des contenus pensés pour vous accompagner.
             </p>
 
             <div className="hero-buttons">
-              <button className="btn-primary">Découvrir les articles</button>
-              <button className="btn-outline">S’abonner à la newsletter</button>
+              <Link to="/ressources" className="btn-primary hero-btn">
+                Explorer les ressources
+              </Link>
+
+              <Link to="/register" className="btn-outline hero-btn hero-btn-newsletter">
+                <span>S’abonner à la</span>
+                <span>newsletter</span>
+              </Link>
             </div>
           </div>
 
-          {/* Image intégrée dans le même rectangle */}
+          {/* ============================
+              IMAGE + MOTS FLOTTANTS
+          ============================ */}
           <div className="hero-image-wrapper">
+
+            {/* Image principale */}
             <img
               src={heroIllustration}
               alt="Illustration interface web"
-              className="hero-image"
+              className="hero-image img-3d"
             />
+
+            {/* Mots flottants */}
+            <div className="floating-words">
+              <span className="word">Création de site IA</span>
+              <span className="word">Tunnels de vente</span>
+              <span className="word">Automatisation</span>
+              <span className="word">Robot humanoïde</span>
+              <span className="word">Audit IA</span>
+              <span className="word">Acquisition clients</span>
+            </div>
+
           </div>
 
         </div>

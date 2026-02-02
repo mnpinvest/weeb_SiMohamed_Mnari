@@ -1,4 +1,5 @@
 import "../styles/footer.css";
+import { Link } from "react-router-dom";
 import { FaYoutube, FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
 export default function Footer() {
@@ -8,52 +9,79 @@ export default function Footer() {
       {/* Bloc supérieur */}
       <div className="footer-top">
 
-        {/* Colonne 1 : Logo */}
+        {/* Bloc 1 : Logo */}
         <div className="footer-col">
-          <h3 className="footer-title footer-logo">weeb</h3>
+          <Link to="/" className="footer-title footer-logo">weeb</Link>
         </div>
 
-        {/* Colonne 2 : PRODUCT */}
+        {/* Bloc 2 : PRODUITS */}
         <div className="footer-col">
-          <h3 className="footer-title">PRODUCT</h3>
+          <h3 className="footer-title">PRODUITS</h3>
           <ul className="footer-links">
-            <li>Pricing</li>
-            <li>Overview</li>
-            <li>Browse</li>
-            <li>Accessibility</li>
-            <li>Five</li>
+            <li>Tunnels de vente</li>
+            <li>Pages de vente</li>
+            <li>Webinaires automatisés</li>
+            <li>Sites internet</li>
+            <li>Refonte de site</li>
           </ul>
         </div>
 
-        {/* Colonne 3 : Solutions */}
+        {/* Bloc 3 : SOLUTIONS */}
         <div className="footer-col">
-          <h3 className="footer-title">Solutions</h3>
+          <h3 className="footer-title">SOLUTIONS</h3>
           <ul className="footer-links">
-            <li>Brainstorming</li>
-            <li>Ideation</li>
-            <li>Wireframing</li>
-            <li>Research</li>
+            <li>Acquisition clients</li>
+            <li>Automatisation</li>
+            <li>Conversion & ventes</li>
+            <li>Analyse & reporting</li>
+            <li>Audit site & tunnel</li>
           </ul>
         </div>
 
-        {/* Colonne 4 : Resources */}
+        {/* Bloc 4 : INNOVATION */}
         <div className="footer-col">
-          <h3 className="footer-title">Resources</h3>
+          <h3 className="footer-title">INNOVATION</h3>
           <ul className="footer-links">
-            <li>Help Center</li>
-            <li>Blog</li>
-            <li>Tutorials</li>
+            <li>Robot humanoïde (vente)</li>
+            <li>Robot humanoïde (location)</li>
+            <li>IA embarquée</li>
+            <li>Systèmes autonomes</li>
+            <li>R&D robotique</li>
           </ul>
         </div>
 
-        {/* Colonne 5 : Company */}
+        {/* Bloc 5 : EXPERTISE IA */}
         <div className="footer-col">
-          <h3 className="footer-title">Company</h3>
+          <h3 className="footer-title">EXPERTISE IA</h3>
           <ul className="footer-links">
-            <li>About</li>
-            <li>Press</li>
-            <li>Events</li>
-            <li>Careers</li>
+            <li>Audit métier IA</li>
+            <li>Diagnostic automatisé</li>
+            <li>Optimisation IA</li>
+            <li>Recommandations stratégiques</li>
+            <li>Analyse comportementale</li>
+          </ul>
+        </div>
+
+        {/* Bloc 6 : INTÉGRATION */}
+        <div className="footer-col">
+          <h3 className="footer-title">INTÉGRATION</h3>
+          <ul className="footer-links">
+            <li>Installation robot humanoïde</li>
+            <li>Paramétrage IA</li>
+            <li>Adaptation métier</li>
+            <li>Maintenance & support</li>
+            <li>Formation & accompagnement</li>
+          </ul>
+        </div>
+
+        {/* Bloc 7 : ENTREPRISE */}
+        <div className="footer-col">
+          <h3 className="footer-title">ENTREPRISE</h3>
+          <ul className="footer-links">
+            <li>À propos</li>
+            <li>Presse</li>
+            <li>Événements</li>
+            <li>Carrières</li>
           </ul>
         </div>
 
@@ -63,7 +91,7 @@ export default function Footer() {
       <div className="footer-bottom">
 
         <p className="footer-copy">
-          © 2025 Weeb, Inc. All rights reserved.
+          © 2025 Weeb, Inc. Tous droits réservés.
         </p>
 
         <div className="footer-socials">

@@ -38,12 +38,31 @@
   margin-top: 24px;
 }
 
+/* ⭐ Animation glow + fade */
+@keyframes trustGlow {
+  0% {
+    opacity: 1;
+    text-shadow: 0 0 0px rgba(192, 132, 252, 0);
+  }
+  50% {
+    opacity: 0.6;
+    text-shadow: 0 0 12px rgba(192, 132, 252, 0.6);
+  }
+  100% {
+    opacity: 1;
+    text-shadow: 0 0 0px rgba(192, 132, 252, 0);
+  }
+}
+
 .trust-title {
   font-family: 'Roboto', sans-serif;
   font-size: 32px;
   font-weight: 700;
   color: #FFFFFF;
   text-align: center;
+
+  /* ⭐ Animation appliquée */
+  animation: trustGlow 2.5s ease-in-out infinite;
 }
 
 
@@ -58,7 +77,7 @@
   justify-content: center;
   align-items: center;
   gap: 40px;
-  flex-wrap: wrap; /* ⭐ permet le responsive automatique */
+  flex-wrap: wrap;
 }
 
 
@@ -71,11 +90,16 @@
   align-items: center;
   gap: 8px;
   height: 32px;
+
+  /* ⭐ Perspective ajoutée pour activer la 3D */
+  perspective: 900px;
 }
 
 .trust-logo img {
   height: 32px;
   width: auto;
+
+  /* ⭐ L’effet 3D sera appliqué via .img-3d dans le JSX */
 }
 
 .trust-logo span {
@@ -83,6 +107,23 @@
   font-size: 18px;
   font-weight: 500;
   color: #FFFFFF;
+}
+
+
+/* ============================
+   ANIMATION 3D UNIVERSELLE
+   ============================ */
+
+@keyframes depthLoop {
+  0%   { transform: scale(1) rotateX(0deg); }
+  50%  { transform: scale(0.94) rotateX(14deg); }
+  100% { transform: scale(1) rotateX(0deg); }
+}
+
+.img-3d {
+  animation: depthLoop 5s ease-in-out infinite;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease;
 }
 
 

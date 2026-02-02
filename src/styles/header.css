@@ -15,17 +15,14 @@
   --radius-btn: 8px;
 }
 
+
 /* ============================
    CLASSES UTILITAIRES
    ============================ */
 
-.desktop-only {
-  display: flex;
-}
+.desktop-only { display: flex; }
+.mobile-only { display: none; }
 
-.mobile-only {
-  display: none;
-}
 
 /* ============================
    STRUCTURE DU HEADER
@@ -58,8 +55,9 @@
   gap: 24px;
 }
 
+
 /* ============================
-   BLOC GAUCHE : LOGO + LIENS
+   BLOC GAUCHE
    ============================ */
 
 .nav-left {
@@ -72,7 +70,6 @@
   font-family: var(--font-main);
   font-size: 32px;
   font-weight: 700;
-  line-height: 110%;
   color: var(--color-white);
 }
 
@@ -86,19 +83,15 @@
   font-family: var(--font-main);
   font-size: var(--fs-nav);
   font-weight: var(--fw-medium);
-  line-height: 24px;
-  letter-spacing: var(--ls-nav);
   color: var(--color-white);
   text-decoration: none;
-  cursor: pointer;
 }
 
-.nav-link:hover {
-  opacity: 0.8;
-}
+.nav-link:hover { opacity: 0.8; }
+
 
 /* ============================
-   BLOC DROITE : LOG IN + JOIN
+   BOUTONS DROITE
    ============================ */
 
 .btn-group {
@@ -107,21 +100,23 @@
   gap: 16px;
 }
 
+/* Bouton violet — TEXTE EN GRAS AJOUTÉ */
 .btn-primary {
   display: flex;
   justify-content: center;
   align-items: center;
 
-  padding: 12px 20px;
-  height: 48px;
+  width: 237px !important;
+  height: 56px !important;
+  padding: 16px !important;
 
   background: var(--color-purple-600);
   border: 2px solid var(--color-purple-600);
   border-radius: var(--radius-btn);
 
   font-family: var(--font-main);
-  font-size: var(--fs-nav);
-  font-weight: var(--fw-medium);
+  font-size: 20px;
+  font-weight: 700; /* GRAS */
   letter-spacing: var(--ls-nav);
   color: var(--color-white);
 
@@ -129,12 +124,40 @@
   transition: 0.2s ease;
 }
 
-.btn-primary:hover {
-  opacity: 0.9;
+.btn-primary:hover { background-color: #7A22C8; }
+
+
+/* Bouton outline — TEXTE EN GRAS AJOUTÉ */
+.btn-outline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 237px !important;
+  height: 56px !important;
+  padding: 16px !important;
+
+  background: transparent;
+  border: 2px solid var(--color-white);
+  border-radius: var(--radius-btn);
+
+  font-family: var(--font-main);
+  font-size: 20px;
+  font-weight: 700; /* GRAS */
+  letter-spacing: var(--ls-nav);
+  color: var(--color-white);
+
+  cursor: pointer;
+  transition: 0.2s ease;
 }
 
+.btn-outline:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+
 /* ============================
-   HAMBURGER (MOBILE)
+   HAMBURGER
    ============================ */
 
 .hamburger {
@@ -143,7 +166,6 @@
   background-color: var(--color-purple-600);
   border: none;
   border-radius: var(--radius-btn);
-  /* PAS de display ici, géré par .mobile-only */
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -157,6 +179,7 @@
   background: var(--color-white);
   border-radius: 4px;
 }
+
 
 /* ============================
    MENU MOBILE
@@ -179,36 +202,34 @@
   text-decoration: none;
 }
 
-.mobile-btn {
-  width: 100%;
-}
+.mobile-btn { width: 100%; }
+
 
 /* ============================
-   RESPONSIVE MOBILE (UNIQUEMENT TÉLÉPHONE)
+   RESPONSIVE MOBILE
    ============================ */
 
 @media (max-width: 600px) {
 
-  .desktop-only {
-    display: none;
-  }
-
-  .mobile-only {
-    display: flex;
-  }
+  .desktop-only { display: none; }
+  .mobile-only { display: flex; }
 
   .header-box {
     padding: 12px 16px;
     gap: 12px;
   }
 
-  .logo {
-    font-size: 28px;
+  .logo { font-size: 28px; }
+
+  .btn-primary,
+  .btn-outline {
+    width: 100% !important;
   }
 }
 
+
 /* ============================
-   RESPONSIVE TABLETTE (601px → 900px)
+   RESPONSIVE TABLETTE
    ============================ */
 
 @media (min-width: 601px) and (max-width: 900px) {
@@ -234,12 +255,11 @@
     gap: 12px;
   }
 
-  .btn-primary {
-    width: 100%;
+  .btn-primary,
+  .btn-outline {
+    width: 100% !important;
     justify-content: center;
   }
 
-  .nav-link {
-    font-size: 15px;
-  }
+  .nav-link { font-size: 15px; }
 }

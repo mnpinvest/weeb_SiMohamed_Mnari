@@ -129,8 +129,8 @@
 .form-footer {
   display: flex;
   justify-content: center;
-  align-items: center; /* aligne verticalement la case radio */
-  gap: 24px; /* espace horizontal entre bouton et case */
+  align-items: center;
+  gap: 24px;
   margin-top: 24px;
 }
 
@@ -154,23 +154,19 @@
 
 
 /* ============================
-   CASE RADIO CARRÉE
+   CASE RADIO + TEXTE ALIGNÉ
    ============================ */
 
 .radio-wrapper {
-  width: 24px;
-  height: 24px;
   display: flex;
-  align-items: center; /* centre verticalement */
-  justify-content: center;
-  position: relative;
+  align-items: center;        /* centre verticalement */
+  gap: 12px;
+  white-space: nowrap;        /* empêche le retour à la ligne */
 }
 
 .radio-input {
-  opacity: 0;
   width: 24px;
   height: 24px;
-  position: absolute;
   cursor: pointer;
 }
 
@@ -178,13 +174,20 @@
   width: 24px;
   height: 24px;
   border: 2px solid #C084FC;
-  border-radius: 4px; /* carré */
+  border-radius: 4px;
   background-color: transparent;
   display: block;
 }
 
 .radio-input:checked + .radio-custom {
   background-color: #9333EA;
+}
+
+.radio-text {
+  font-size: 15px;
+  color: #CBD5E1;
+  line-height: 1;
+  margin-top: 2px;            /* ajuste la hauteur pour être à mi‑hauteur */
 }
 
 
@@ -226,13 +229,11 @@
     gap: 32px;
   }
 
-  /* Champs en colonne */
   .form-row {
     flex-direction: column;
     gap: 32px;
   }
 
-  /* Bouton + case radio en colonne */
   .form-footer {
     flex-direction: column;
     gap: 16px;

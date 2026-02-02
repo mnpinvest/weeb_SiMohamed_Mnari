@@ -1,23 +1,51 @@
-import React from "react";
+import React, { useState } from "react";
+import { useNavigate, Link } from "react-router-dom";
 import "../styles/login.css";
 
 export default function LogIn() {
+  const navigate = useNavigate();
+
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // Vérifier si un compte existe
+    const userExists = localStorage.getItem("user_account_created") === "true";
+
+    // Aucun compte → redirection vers Register
+    if (!userExists) {
+      navigate("/register");
+      return;
+    }
+
+    // Connexion simulée (backend plus tard)
+    localStorage.setItem("isLoggedIn", "true");
+
+    // Vérifier si un message Contact est en attente
+    const savedMessage = localStorage.getItem("contact_message");
+
+    if (savedMessage) {
+      navigate("/contact");
+    } else {
+      navigate("/ressources"); // Redirection logique si aucun message
+    }
+  };
+
   return (
     <main className="login-wrapper">
 
-      {/* ============================
-          SECTION FIGMA LOGIN
-      ============================ */}
       <section className="login-figma-box">
         <div className="login-inner-box">
 
-          {/* Titre */}
           <h2 className="login-figma-title">Se connecter</h2>
 
-          {/* Champs Email + Password */}
-          <form className="login-figma-form">
+          {error && <p style={{ color: "#F87171", fontSize: "14px" }}>{error}</p>}
 
-            {/* Champ Email */}
+          <form className="login-figma-form" onSubmit={handleSubmit}>
+
             <div className="login-field">
               <label htmlFor="email" className="login-label">Email</label>
 
@@ -26,12 +54,13 @@ export default function LogIn() {
                 id="email"
                 className="login-input"
                 autoComplete="off"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               />
 
               <div className="login-underline"></div>
             </div>
 
-            {/* Champ Password */}
             <div className="login-field">
               <label htmlFor="password" className="login-label">Password</label>
 
@@ -40,25 +69,27 @@ export default function LogIn() {
                 id="password"
                 className="login-input"
                 autoComplete="off"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
               />
 
               <div className="login-underline"></div>
             </div>
 
-            {/* Bouton */}
             <button type="submit" className="login-figma-button">
               Se connecter
             </button>
           </form>
 
-          {/* Lien mot de passe oublié */}
-          <a href="#" className="login-forgot">Mot de passe oublié ?</a>
+          <Link to="/reset-password" className="login-forgot">
+            Mot de passe oublié ?
+          </Link>
 
-          {/* Texte créer un compte */}
           <div className="login-create">
-            <p>Vous n’avez pas de compte ?</p>
-            <p>Vous pouvez</p>
-            <p><a href="#">en créer un</a></p>
+            <p>
+              Vous n’avez pas de compte ?{" "}
+              <Link to="/register">Créer un compte</Link>
+            </p>
           </div>
 
         </div>
