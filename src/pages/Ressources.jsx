@@ -6,7 +6,6 @@ import RessourcesCategories from "../components/RessourcesCategories";
 export default function Ressources() {
   const navigate = useNavigate();
 
-  // Fonction audio + redirection
   const playAudioThenRedirect = (audioPath) => {
     if (window.currentAudio) {
       window.currentAudio.pause();
@@ -19,7 +18,6 @@ export default function Ressources() {
 
     audio.play().catch(() => {
       console.warn("Audio bloqué");
-      // ❌ PAS DE REDIRECTION ICI
     });
 
     audio.onended = () => {
@@ -62,7 +60,7 @@ export default function Ressources() {
               className="guide-card card"
               onClick={() => playAudioThenRedirect("/audio/7_1_Moderniser_services_IA.mp3")}
               style={{
-                backgroundImage: "url('/src/assets/ModerniserVosServiceIA.png')",
+                backgroundImage: "url('/assets/ModerniserVosServiceIA.png')",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",
@@ -89,7 +87,7 @@ export default function Ressources() {
               className="guide-card card"
               onClick={() => playAudioThenRedirect("/audio/8_1_Digitalisation_systemes_essentiels.mp3")}
               style={{
-                backgroundImage: "url('/src/assets/DigitalisationIntelligente.png')",
+                backgroundImage: "url('/assets/DigitalisationIntelligente.png')",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",
@@ -116,7 +114,7 @@ export default function Ressources() {
               className="guide-card card"
               onClick={() => playAudioThenRedirect("/audio/9_1_Modeles_IA_sante_recherche.mp3")}
               style={{
-                backgroundImage: "url('/src/assets/ModelesIASanteRecherche.png')",
+                backgroundImage: "url('/assets/ModelesIASanteRecherche.png')",
                 backgroundSize: "100% auto",
                 backgroundPosition: "top center",
                 backgroundRepeat: "no-repeat",
@@ -153,7 +151,7 @@ export default function Ressources() {
               className="tuto-card card"
               onClick={() => playAudioThenRedirect("/audio/10_1_Creer_miniaudit_IA.mp3")}
               style={{
-                backgroundImage: "url('/src/assets/AuditIA.png')",
+                backgroundImage: "url('/assets/AuditIA.png')",
                 backgroundSize: "100% auto",
                 backgroundPosition: "top center",
                 backgroundRepeat: "no-repeat",
@@ -179,7 +177,7 @@ export default function Ressources() {
               className="tuto-card card"
               onClick={() => playAudioThenRedirect("/audio/11_1_Installer_ChaBox_IA.mp3")}
               style={{
-                backgroundImage: "url('/src/assets/ChatBoxIA.png')",
+                backgroundImage: "url('/assets/ChatBoxIA.png')",
                 backgroundSize: "100% auto",
                 backgroundPosition: "top center",
                 backgroundRepeat: "no-repeat",
@@ -205,7 +203,7 @@ export default function Ressources() {
               className="tuto-card card"
               onClick={() => playAudioThenRedirect("/audio/12_1_Centraliser_automatiser_toutes_vos_demandes.mp3")}
               style={{
-                backgroundImage: "url('/src/assets/CentralisationIa.png')",
+                backgroundImage: "url('/assets/CentralisationIa.png')",
                 backgroundSize: "100% auto",
                 backgroundPosition: "top center",
                 backgroundRepeat: "no-repeat",

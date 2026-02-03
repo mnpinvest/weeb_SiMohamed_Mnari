@@ -39,7 +39,7 @@ export default function GuidesPopulaires() {
           <div
             className="guide-image"
             style={{
-              backgroundImage: "url('/src/assets/ModerniserVosServiceIA.png')",
+              backgroundImage: "url('/assets/ModerniserVosServiceIA.png')",
               backgroundSize: "cover",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",

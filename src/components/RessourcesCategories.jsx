@@ -4,27 +4,19 @@ import { FiArrowRight } from "react-icons/fi";
 export default function RessourcesCategories() {
   const navigate = useNavigate();
 
-  // Fonction générique pour toutes les cartes audio
   const playAudioThenRedirect = (audioPath) => {
-    // Si un audio est déjà en cours → on l'arrête
     if (window.currentAudio) {
       window.currentAudio.pause();
       window.currentAudio.currentTime = 0;
     }
 
-    // On crée un nouvel audio
     const audio = new Audio(audioPath);
     audio.volume = 1;
-
-    // On mémorise l'audio courant globalement
     window.currentAudio = audio;
 
-    // Lecture immédiate
     audio.play().catch(() => {});
 
-    // Quand l'audio se termine → redirection
     audio.onended = () => {
-      // On nettoie la référence si c'est bien l'audio courant
       if (window.currentAudio === audio) {
         window.currentAudio = null;
       }
@@ -45,7 +37,7 @@ export default function RessourcesCategories() {
             className="category-card card"
             onClick={() => playAudioThenRedirect("/audio/1_1_Automatisation.mp3")}
             style={{
-              backgroundImage: "url('/src/assets/AutomatisationAgentsIA.png')",
+              backgroundImage: "url('/assets/AutomatisationAgentsIA.png')",
               backgroundSize: "cover",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
@@ -71,7 +63,7 @@ export default function RessourcesCategories() {
             className="category-card card"
             onClick={() => playAudioThenRedirect("/audio/2_1_Tunel_de_vente.mp3")}
             style={{
-              backgroundImage: "url('/src/assets/TunnelsDeVenteConversion.png')",
+              backgroundImage: "url('/assets/TunnelsDeVenteConversion.png')",
               backgroundSize: "cover",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
@@ -97,8 +89,7 @@ export default function RessourcesCategories() {
             className="category-card card"
             onClick={() => playAudioThenRedirect("/audio/3_1_robots humanoïdes.txt.mp3")}
             style={{
-              backgroundImage:
-                "url('/src/assets/RobotsHumanoidesIAEmbarquee.png')",
+              backgroundImage: "url('/assets/RobotsHumanoidesIAEmbarquee.png')",
               backgroundSize: "cover",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
@@ -124,8 +115,7 @@ export default function RessourcesCategories() {
             className="category-card card"
             onClick={() => playAudioThenRedirect("/audio/4_1_ModernisationIA_des_services_publics.mp3")}
             style={{
-              backgroundImage:
-                "url('/src/assets/ModernisationIADesServicesPublics.png')",
+              backgroundImage: "url('/assets/ModernisationIADesServicesPublics.png')",
               backgroundSize: "cover",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
@@ -151,7 +141,7 @@ export default function RessourcesCategories() {
             className="category-card card"
             onClick={() => playAudioThenRedirect("/audio/5_1_Modèles IA & IA Santé.mp3")}
             style={{
-              backgroundImage: "url('/src/assets/ModèlesIA_IASante.png')",
+              backgroundImage: "url('/assets/ModèlesIA_IASante.png')",
               backgroundSize: "cover",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
@@ -177,8 +167,7 @@ export default function RessourcesCategories() {
             className="category-card card"
             onClick={() => playAudioThenRedirect("/audio/6_1_Intégrateur Robotique Humanoïde.mp3")}
             style={{
-              backgroundImage:
-                "url('/src/assets/IntegrateurRobotiqueHumanoïde.png')",
+              backgroundImage: "url('/assets/IntegrateurRobotiqueHumanoïde.png')",
               backgroundSize: "cover",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",

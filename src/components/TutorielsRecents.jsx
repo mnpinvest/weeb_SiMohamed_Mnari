@@ -1,32 +1,23 @@
 import { useNavigate } from "react-router-dom";
 import { FiArrowRight } from "react-icons/fi";
 
-import imgMiniAudit from "/src/assets/TutoMiniAuditOrganisation.png";
-import imgChatbox from "/src/assets/TutoChatboxOrganisation.png";
-import imgFormulaire from "/src/assets/TutoFormulaireIntelligent.png";
-
 export default function TutorielsRecents() {
   const navigate = useNavigate();
 
   const playAudioThenRedirect = (audioPath) => {
-    // Stop audio en cours
     if (window.currentAudio) {
       window.currentAudio.pause();
       window.currentAudio.currentTime = 0;
     }
 
-    // Nouveau fichier audio
     const audio = new Audio(audioPath);
     audio.volume = 1;
     window.currentAudio = audio;
 
-    // Lecture
     audio.play().catch(() => {
       console.warn("Audio bloqué");
-      // ❌ PAS DE REDIRECTION ICI
     });
 
-    // Redirection uniquement après la fin
     audio.onended = () => {
       if (window.currentAudio === audio) {
         window.currentAudio = null;
@@ -49,7 +40,7 @@ export default function TutorielsRecents() {
             className="tuto-card card"
             onClick={() => playAudioThenRedirect("/audio/10_1_Creer_miniaudit_IA.mp3")}
             style={{
-              backgroundImage: `url(${imgMiniAudit})`,
+              backgroundImage: "url('/assets/TutoMiniAuditOrganisation.png')",
               backgroundSize: "cover",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
@@ -74,7 +65,7 @@ export default function TutorielsRecents() {
             className="tuto-card card"
             onClick={() => playAudioThenRedirect("/audio/11_1_Installer_ChaBox_IA.mp3")}
             style={{
-              backgroundImage: `url(${imgChatbox})`,
+              backgroundImage: "url('/assets/TutoChatboxOrganisation.png')",
               backgroundSize: "cover",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
@@ -97,9 +88,11 @@ export default function TutorielsRecents() {
 
           <div
             className="tuto-card card"
-            onClick={() => playAudioThenRedirect("/audio/12_1_Centraliser_automatiser_toutes_vos_demandes.mp3")}
+            onClick={() =>
+              playAudioThenRedirect("/audio/12_1_Centraliser_automatiser_toutes_vos_demandes.mp3")
+            }
             style={{
-              backgroundImage: `url(${imgFormulaire})`,
+              backgroundImage: "url('/assets/TutoFormulaireIntelligent.png')",
               backgroundSize: "cover",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
