@@ -28,9 +28,16 @@ export default function SectionRessources() {
   }, []);
 
   return (
-    <section className="ressources">
+    <section
+      className="ressources"
+      role="region"
+      aria-label="Section présentant les ressources pour progresser dans le numérique"
+    >
       <div className="ressources-box">
 
+        {/* ============================
+            COLONNE GAUCHE
+        ============================ */}
         <div className="ressources-left">
 
           <h3 className="ressources-subtitle">
@@ -50,17 +57,29 @@ export default function SectionRessources() {
             digitale.
           </p>
 
-          <Link to="/ressources" className="ressources-btn blink scroll-reveal">
+          <Link
+            to="/ressources"
+            className="ressources-btn blink scroll-reveal"
+            aria-label="Explorer toutes les ressources disponibles"
+          >
             Explorer les ressources
-            <FiArrowRight className="ressources-btn-icon arrow-animate" />
+
+            {/* Icône décorative ignorée par les lecteurs d’écran */}
+            <FiArrowRight
+              className="ressources-btn-icon arrow-animate"
+              aria-hidden="true"
+            />
           </Link>
 
         </div>
 
+        {/* ============================
+            COLONNE DROITE
+        ============================ */}
         <div className="ressources-right">
           <img
             src={Image2}
-            alt="Illustration ressources"
+            alt="Illustration représentant des ressources numériques et des outils d’apprentissage"
             className="ressources-image img-3d"
           />
         </div>

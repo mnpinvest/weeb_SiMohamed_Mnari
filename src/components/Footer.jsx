@@ -3,91 +3,312 @@ import { Link } from "react-router-dom";
 import { FaYoutube, FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
 export default function Footer() {
-  return (
-    <footer className="footer">
 
-      {/* Bloc supérieur */}
+  // Fonction de scroll intelligent
+  const smartScroll = (e, targetId) => {
+    if (window.location.pathname === "/ressources") {
+      e.preventDefault();
+      const el = document.querySelector(targetId);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+  };
+
+  return (
+    <footer
+      className="footer"
+      role="contentinfo"
+      aria-label="Pied de page du site contenant les liens de navigation"
+    >
+
       <div className="footer-top">
 
-        {/* Bloc 1 : Logo */}
+        {/* Logo */}
         <div className="footer-col">
-          <Link to="/" className="footer-title footer-logo">weeb</Link>
+          <Link to="/" className="footer-title footer-logo">
+            weeb
+          </Link>
         </div>
 
-        {/* Bloc 2 : PRODUITS */}
+        {/* PRODUITS */}
         <div className="footer-col">
           <h3 className="footer-title">PRODUITS</h3>
           <ul className="footer-links">
-            <li>Tunnels de vente</li>
-            <li>Pages de vente</li>
-            <li>Webinaires automatisés</li>
-            <li>Sites internet</li>
-            <li>Refonte de site</li>
+
+            <li>
+              <Link
+                to="/ressources#tunnels-conversion"
+                onClick={(e) => smartScroll(e, "#tunnels-conversion")}
+              >
+                Tunnels de vente
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                to="/ressources#tunnels-conversion"
+                onClick={(e) => smartScroll(e, "#tunnels-conversion")}
+              >
+                Pages de vente
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                to="/ressources#tunnels-conversion"
+                onClick={(e) => smartScroll(e, "#tunnels-conversion")}
+              >
+                Webinaires automatisés
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                to="/ressources#tunnels-conversion"
+                onClick={(e) => smartScroll(e, "#tunnels-conversion")}
+              >
+                Sites internet
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                to="/ressources#tunnels-conversion"
+                onClick={(e) => smartScroll(e, "#tunnels-conversion")}
+              >
+                Refonte de site
+              </Link>
+            </li>
+
           </ul>
         </div>
 
-        {/* Bloc 3 : SOLUTIONS */}
+        {/* SOLUTIONS */}
         <div className="footer-col">
           <h3 className="footer-title">SOLUTIONS</h3>
           <ul className="footer-links">
-            <li>Acquisition clients</li>
-            <li>Automatisation</li>
-            <li>Conversion & ventes</li>
-            <li>Analyse & reporting</li>
-            <li>Audit site & tunnel</li>
+
+            <li>
+              <Link
+                to="/ressources#automatisation-agents-ia"
+                onClick={(e) => smartScroll(e, "#automatisation-agents-ia")}
+              >
+                Acquisition clients
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                to="/ressources#automatisation-agents-ia"
+                onClick={(e) => smartScroll(e, "#automatisation-agents-ia")}
+              >
+                Automatisation
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                to="/ressources#automatisation-agents-ia"
+                onClick={(e) => smartScroll(e, "#automatisation-agents-ia")}
+              >
+                Conversion & ventes
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                to="/ressources#automatisation-agents-ia"
+                onClick={(e) => smartScroll(e, "#automatisation-agents-ia")}
+              >
+                Analyse & reporting
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                to="/ressources#automatisation-agents-ia"
+                onClick={(e) => smartScroll(e, "#automatisation-agents-ia")}
+              >
+                Audit site & tunnel
+              </Link>
+            </li>
+
           </ul>
         </div>
 
-        {/* Bloc 4 : INNOVATION */}
+        {/* INNOVATION */}
         <div className="footer-col">
           <h3 className="footer-title">INNOVATION</h3>
           <ul className="footer-links">
-            <li>Robot humanoïde (vente)</li>
-            <li>Robot humanoïde (location)</li>
-            <li>IA embarquée</li>
-            <li>Systèmes autonomes</li>
-            <li>R&D robotique</li>
+
+            <li>
+              <Link
+                to="/ressources#robots-humanoides"
+                onClick={(e) => smartScroll(e, "#robots-humanoides")}
+              >
+                Robot humanoïde (vente)
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                to="/ressources#robots-humanoides"
+                onClick={(e) => smartScroll(e, "#robots-humanoides")}
+              >
+                Robot humanoïde (location)
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                to="/ressources#robots-humanoides"
+                onClick={(e) => smartScroll(e, "#robots-humanoides")}
+              >
+                IA embarquée
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                to="/ressources#robots-humanoides"
+                onClick={(e) => smartScroll(e, "#robots-humanoides")}
+              >
+                Systèmes autonomes
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                to="/ressources#robots-humanoides"
+                onClick={(e) => smartScroll(e, "#robots-humanoides")}
+              >
+                R&D robotique
+              </Link>
+            </li>
+
           </ul>
         </div>
 
-        {/* Bloc 5 : EXPERTISE IA */}
+        {/* EXPERTISE IA */}
         <div className="footer-col">
           <h3 className="footer-title">EXPERTISE IA</h3>
           <ul className="footer-links">
-            <li>Audit métier IA</li>
-            <li>Diagnostic automatisé</li>
-            <li>Optimisation IA</li>
-            <li>Recommandations stratégiques</li>
-            <li>Analyse comportementale</li>
+
+            <li>
+              <Link
+                to="/ressources#modeles-ia-sante"
+                onClick={(e) => smartScroll(e, "#modeles-ia-sante")}
+              >
+                Audit métier IA
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                to="/ressources#modeles-ia-sante"
+                onClick={(e) => smartScroll(e, "#modeles-ia-sante")}
+              >
+                Diagnostic automatisé
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                to="/ressources#modeles-ia-sante"
+                onClick={(e) => smartScroll(e, "#modeles-ia-sante")}
+              >
+                Optimisation IA
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                to="/ressources#modeles-ia-sante"
+                onClick={(e) => smartScroll(e, "#modeles-ia-sante")}
+              >
+                Recommandations stratégiques
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                to="/ressources#modeles-ia-sante"
+                onClick={(e) => smartScroll(e, "#modeles-ia-sante")}
+              >
+                Analyse comportementale
+              </Link>
+            </li>
+
           </ul>
         </div>
 
-        {/* Bloc 6 : INTÉGRATION */}
+        {/* INTÉGRATION */}
         <div className="footer-col">
           <h3 className="footer-title">INTÉGRATION</h3>
           <ul className="footer-links">
-            <li>Installation robot humanoïde</li>
-            <li>Paramétrage IA</li>
-            <li>Adaptation métier</li>
-            <li>Maintenance & support</li>
-            <li>Formation & accompagnement</li>
+
+            <li>
+              <Link
+                to="/ressources#integrateur-robotique"
+                onClick={(e) => smartScroll(e, "#integrateur-robotique")}
+              >
+                Installation robot humanoïde
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                to="/ressources#integrateur-robotique"
+                onClick={(e) => smartScroll(e, "#integrateur-robotique")}
+              >
+                Paramétrage IA
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                to="/ressources#integrateur-robotique"
+                onClick={(e) => smartScroll(e, "#integrateur-robotique")}
+              >
+                Adaptation métier
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                to="/ressources#integrateur-robotique"
+                onClick={(e) => smartScroll(e, "#integrateur-robotique")}
+              >
+                Maintenance & support
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                to="/ressources#integrateur-robotique"
+                onClick={(e) => smartScroll(e, "#integrateur-robotique")}
+              >
+                Formation & accompagnement
+              </Link>
+            </li>
+
           </ul>
         </div>
 
-        {/* Bloc 7 : ENTREPRISE */}
+        {/* ENTREPRISE */}
         <div className="footer-col">
           <h3 className="footer-title">ENTREPRISE</h3>
           <ul className="footer-links">
-            <li>À propos</li>
             <li>Presse</li>
             <li>Événements</li>
-            <li>Carrières</li>
+            <li><Link to="/contact">Carrières</Link></li>
           </ul>
         </div>
 
       </div>
 
-      {/* Bloc inférieur */}
+      {/* Bas du footer */}
       <div className="footer-bottom">
 
         <p className="footer-copy">

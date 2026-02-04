@@ -162,7 +162,6 @@
   transition: 0.3s ease;
 }
 
-/* 🔥 Correction critique : clic */
 .tuto-btn,
 .tuto-btn * {
   pointer-events: none !important;
@@ -230,8 +229,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #0F172A; /* évite le fond blanc */
-  overflow: hidden; /* empêche le débordement visible */
+  background-color: #0F172A;
+  overflow: hidden;
   border-radius: 16px;
 }
 
@@ -244,7 +243,6 @@
   border-radius: 16px;
 }
 
-/* Animation profondeur */
 .img-depth {
   animation: cameraAdvance 12s ease-in-out infinite alternate;
   transform-origin: center;
@@ -297,4 +295,73 @@
   .ressources-hero-subtitle {
     font-size: 16px;
   }
+}
+
+
+/* ============================
+   ACCESSIBILITÉ — TRANSCRIPTIONS
+============================ */
+
+.transcript-btn {
+  margin-top: 6px;
+  font-size: 14px;
+  color: #C084FC;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: underline;
+  text-align: center;
+  transition: 0.2s ease;
+  font-weight: 500;
+}
+
+.transcript-btn:hover {
+  color: #E9D5FF;
+}
+
+.transcript-text {
+  margin-top: 10px;
+  padding: 14px 18px;
+
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+
+  font-size: 15px;
+  line-height: 150%;
+  color: #F1F5F9;
+
+  animation: fadeTranscript 0.25s ease-out;
+}
+
+.transcript-text p,
+.transcript-text br {
+  margin-bottom: 10px;
+}
+
+
+/* ⭐⭐ CENTRAGE PARFAIT DU LIEN ⭐⭐ */
+.transcript-link {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 14px;
+
+  color: #C084FC;
+  font-weight: 600;
+  text-decoration: underline;
+  transition: 0.2s ease;
+}
+
+.transcript-link:hover {
+  color: #E9D5FF;
+}
+
+@keyframes fadeTranscript {
+  0% { opacity: 0; transform: translateY(6px); }
+  100% { opacity: 1; transform: translateY(0); }
 }

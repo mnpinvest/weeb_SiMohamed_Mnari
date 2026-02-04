@@ -31,33 +31,51 @@ export default function Header() {
   };
 
   return (
-    <header className="header">
+    <header
+      className="header"
+      role="banner"
+      aria-label="En-tête du site contenant la navigation principale"
+    >
       <div className="container">
         <div className="header-box">
 
           {/* GAUCHE */}
           <div className="nav-left">
-            <Link to="/" className="logo">weeb</Link>
 
-            <nav className="nav-links desktop-only">
+            {/* LOGO */}
+            <Link
+              to="/"
+              className="logo"
+              aria-label="Retour à la page d’accueil"
+            >
+              weeb
+            </Link>
+
+            {/* NAVIGATION DESKTOP */}
+            <nav
+              className="nav-links desktop-only"
+              role="navigation"
+              aria-label="Navigation principale"
+            >
               {isHome && (
                 <>
-                  <Link className="nav-link" to="/">À propos</Link>
-                  <Link className="nav-link" to="/contact">Contact</Link>
+                  <Link className="nav-link" to="/" aria-label="À propos">À propos</Link>
+                  <Link className="nav-link" to="/contact" aria-label="Page contact">Contact</Link>
                 </>
               )}
 
               {isContact && (
                 <>
-                  <Link className="nav-link" to="/">Accueil</Link>
-                  <Link className="nav-link" to="/contact">Contact</Link>
+                  <Link className="nav-link" to="/" aria-label="Retour à l’accueil">Accueil</Link>
+                  <Link className="nav-link" to="/contact" aria-label="Page contact">Contact</Link>
                 </>
               )}
 
               {isLogin && (
-                <Link className="nav-link" to="/">Accueil</Link>
+                <Link className="nav-link" to="/" aria-label="Retour à l’accueil">Accueil</Link>
               )}
 
+              {/* Pages où on ne montre pas de liens */}
               {isRegister && null}
               {isRessources && null}
               {isResetPassword && null}
@@ -69,7 +87,11 @@ export default function Header() {
 
             {/* SI CONNECTÉ */}
             {isLoggedIn && (
-              <button className="btn-outline" onClick={handleLogout}>
+              <button
+                className="btn-outline"
+                onClick={handleLogout}
+                aria-label="Se déconnecter"
+              >
                 Déconnexion
               </button>
             )}
@@ -79,8 +101,21 @@ export default function Header() {
               <>
                 {(isHome || isLogin || isContact || isRessources || isRegister || isResetPassword) && (
                   <>
-                    <Link className="btn-outline" to="/login">Se connecter</Link>
-                    <Link className="btn-primary" to="/register">Créer un compte</Link>
+                    <Link
+                      className="btn-outline"
+                      to="/login"
+                      aria-label="Se connecter à son compte"
+                    >
+                      Se connecter
+                    </Link>
+
+                    <Link
+                      className="btn-primary"
+                      to="/register"
+                      aria-label="Créer un compte"
+                    >
+                      Créer un compte
+                    </Link>
                   </>
                 )}
               </>
@@ -91,23 +126,32 @@ export default function Header() {
           <button
             className="hamburger mobile-only"
             onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Ouvrir ou fermer le menu mobile"
+            aria-expanded={menuOpen}
+            aria-controls="mobile-menu"
           >
-            <span></span>
-            <span></span>
-            <span></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
           </button>
 
         </div>
 
         {/* MENU MOBILE */}
         {menuOpen && (
-          <div className="mobile-menu">
+          <div
+            id="mobile-menu"
+            className="mobile-menu"
+            role="navigation"
+            aria-label="Menu mobile"
+          >
 
             {/* Accueil si pas sur Register */}
             {!isRegister && (
               <Link
                 className="mobile-link"
                 to="/"
+                aria-label="Retour à l’accueil"
                 onClick={() => setMenuOpen(false)}
               >
                 Accueil
@@ -120,13 +164,16 @@ export default function Header() {
                 <Link
                   className="mobile-link"
                   to="/"
+                  aria-label="À propos"
                   onClick={() => setMenuOpen(false)}
                 >
                   À propos
                 </Link>
+
                 <Link
                   className="mobile-link"
                   to="/contact"
+                  aria-label="Page contact"
                   onClick={() => setMenuOpen(false)}
                 >
                   Contact
@@ -138,6 +185,7 @@ export default function Header() {
               <Link
                 className="mobile-link"
                 to="/contact"
+                aria-label="Page contact"
                 onClick={() => setMenuOpen(false)}
               >
                 Contact
@@ -148,6 +196,7 @@ export default function Header() {
             {isLoggedIn && (
               <button
                 className="mobile-link"
+                aria-label="Se déconnecter"
                 onClick={() => {
                   setMenuOpen(false);
                   handleLogout();
@@ -163,6 +212,7 @@ export default function Header() {
                 <Link
                   className="mobile-link"
                   to="/login"
+                  aria-label="Se connecter"
                   onClick={() => setMenuOpen(false)}
                 >
                   Se connecter
@@ -171,6 +221,7 @@ export default function Header() {
                 <Link
                   className="btn-primary mobile-btn"
                   to="/register"
+                  aria-label="Créer un compte"
                   onClick={() => setMenuOpen(false)}
                 >
                   Créer un compte

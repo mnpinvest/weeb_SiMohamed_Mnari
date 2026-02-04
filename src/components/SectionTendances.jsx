@@ -5,7 +5,11 @@ import { Link } from "react-router-dom";
 
 export default function SectionTendances() {
   return (
-    <section className="tendances">
+    <section
+      className="tendances"
+      role="region"
+      aria-label="Section présentant les tendances numériques et les évolutions du digital"
+    >
       <div className="tendances-box">
 
         {/* Bloc gauche : carré + image */}
@@ -13,7 +17,7 @@ export default function SectionTendances() {
           <div className="tendances-image-wrapper">
             <img
               src={Shapes4}
-              alt="Illustration tendances numériques"
+              alt="Illustration représentant les tendances numériques et les évolutions technologiques"
               className="tendances-image img-3d"
             />
           </div>
@@ -38,9 +42,18 @@ export default function SectionTendances() {
           </p>
 
           {/* CTA vers la page ressources */}
-          <Link to="/ressources" className="tendances-btn">
+          <Link
+            to="/ressources"
+            className="tendances-btn"
+            aria-label="Explorer les ressources récentes et les dernières tendances numériques"
+          >
             Explorer les ressources récentes
-            <FiArrowRight className="tendances-btn-icon" />
+
+            {/* Icône décorative ignorée par les lecteurs d’écran */}
+            <FiArrowRight
+              className="tendances-btn-icon"
+              aria-hidden="true"
+            />
           </Link>
 
         </div>

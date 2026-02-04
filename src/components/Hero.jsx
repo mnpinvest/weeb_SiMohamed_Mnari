@@ -4,10 +4,14 @@ import { Link } from "react-router-dom";
 
 export default function Hero() {
   return (
-    <section className="hero">
+    <section
+      className="hero"
+      role="region"
+      aria-label="Section d’introduction du site présentant les ressources numériques"
+    >
       <div className="container">
         <div className="hero-box">
-          
+
           {/* ============================
               CONTENU TEXTE
           ============================ */}
@@ -26,11 +30,19 @@ export default function Hero() {
             </p>
 
             <div className="hero-buttons">
-              <Link to="/ressources" className="btn-primary hero-btn">
+              <Link
+                to="/ressources"
+                className="btn-primary hero-btn"
+                aria-label="Explorer toutes les ressources disponibles sur la plateforme"
+              >
                 Explorer les ressources
               </Link>
 
-              <Link to="/register" className="btn-outline hero-btn hero-btn-newsletter">
+              <Link
+                to="/register"
+                className="btn-outline hero-btn hero-btn-newsletter"
+                aria-label="S’abonner à la newsletter pour recevoir les nouveautés"
+              >
                 <span>S’abonner à la</span>
                 <span>newsletter</span>
               </Link>
@@ -45,12 +57,15 @@ export default function Hero() {
             {/* Image principale */}
             <img
               src={heroIllustration}
-              alt="Illustration interface web"
+              alt="Illustration représentant une interface web moderne avec des éléments numériques"
               className="hero-image img-3d"
             />
 
-            {/* Mots flottants */}
-            <div className="floating-words">
+            {/* Mots flottants — décoratifs, ignorés par les lecteurs d’écran */}
+            <div
+              className="floating-words"
+              aria-hidden="true"
+            >
               <span className="word">Création de site IA</span>
               <span className="word">Tunnels de vente</span>
               <span className="word">Automatisation</span>
